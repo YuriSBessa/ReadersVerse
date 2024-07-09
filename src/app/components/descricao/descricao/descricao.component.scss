@@ -1,0 +1,8 @@
+.conteudo_principal{
+    display: flex;
+    flex-direction: row;
+    .detalhes{
+        padding: 10px;
+        width: 50%;
+    }
+}

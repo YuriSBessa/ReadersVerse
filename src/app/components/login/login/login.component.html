@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="form-card">
+        <div class="titulo">
+            <h1>Login</h1>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="Submit()">
+            <div class="form">
+                <label for="name">Nome:</label>
+                <input type="text" class="caixa-texto" placeholder="Digite o seu nome" formControlName="name">
+            </div>
+            <div class="form">
+                <label for="password">Senha:</label>
+                <input type="password" class="caixa-texto" placeholder="Digite a sua senha" formControlName="password">
+            </div>
+            <p>Não possui uma conta? <a routerLink="/cadastro">Cadastre-se</a></p>
+            <div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="form-card">
+        <div class="titulo">
+            <h1>Perfil</h1>
+        </div>
+        <p>Nome: {{carteiraDTO?.username}}</p>
+        <br>
+        <p>Saldo: {{carteiraDTO?.saldo_atual}}</p>
+        <div>
+            <button class="btn-submit" (click)="LogOut()">Log-out</button>
+        </div>
+    </div>
+</div>

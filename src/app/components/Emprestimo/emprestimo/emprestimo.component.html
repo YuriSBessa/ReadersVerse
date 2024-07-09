@@ -1,0 +1,32 @@
+<h1>Historico</h1>
+
+<div class="container">
+    <table class="minha-tabela">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Genero</th>
+            <th>Data do emprestimo</th>
+            <th>Data da devolução prevista</th>
+            <th>Data da devolução efetiva</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emprestimo of emprestimoDTO">
+            <td>{{ emprestimo.titulo }}</td>
+            <td>{{ emprestimo.autor }}</td>
+            <td>{{ emprestimo.genero }}</td>
+            <td>{{ emprestimo.dataEmprestimo }}</td>
+            <td>{{ emprestimo.dataDevolucaoPrevista }}</td>
+            <td>{{ emprestimo.dataDevolucaoEfetiva }}</td>
+            <td>{{ status }}</td>
+            <td>
+                <button class="btn-devolver" (click)="DevolverLivro(emprestimo.id)">Devolver</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

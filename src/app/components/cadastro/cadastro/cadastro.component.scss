@@ -1,0 +1,52 @@
+.form-card{
+    width: 20%;
+    padding: 80px 20px 80px 20px;
+    border:1px, solid, rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin: auto;
+    align-items: center;
+    top: 35%;
+    transform: translateY(35%);
+
+    .titulo{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
+
+.conteiner{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-submit{
+    padding: 10px;
+    margin-top: 22px;
+    background-color: #395daa;
+    border: 1px solid #395daa;
+    border-radius: 6px;
+    color: white;
+    width: 100%;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #4b6eb9;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label{
+        padding-bottom: 5px;
+    }
+
+    .caixa-texto{
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+}

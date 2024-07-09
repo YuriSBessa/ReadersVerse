@@ -1,0 +1,30 @@
+<h1 class="titulo">Home</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="buscar">Buscar</label>
+    <input type="text" placeholder="Digite o livro que deseja buscar" class="caixa-texto" formControlName="buscar">
+  </div>
+  <div class="dropdown">
+    <label for="filtros">Por:</label>
+    <select formControlName="filtros">
+      <option *ngFor="let filtro of filtrosDisponiveis" [value]="filtro.id">
+        {{ filtro.name }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <button type="submit" class="btn-enviar">Buscar</button>
+  </div>
+</form>
+
+<div class="card-container">
+  <div *ngFor="let livro of livros" class="card" [routerLink]="['/descricao', livro.id]" (error)="onImageError($event)">
+    <img [src]="livro.imagem_url" alt="{{ livro.titulo }}">
+    <div class="card-body">
+      <h3>{{ livro.titulo }}</h3>
+      <p>Preço: {{ livro.preco }}R$</p>
+      <p>Quantidade: {{ livro.quantidade }}</p>
+      <p>{{ disponibilidade }}</p>
+    </div>
+  </div>
+</div>

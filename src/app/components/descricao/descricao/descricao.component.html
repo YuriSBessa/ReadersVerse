@@ -1,0 +1,19 @@
+<div class="conteudo_principal">
+    <div *ngIf="livro" class="detalhes">
+        <h1>{{ livro.titulo }}</h1>
+        <p>{{ livro.descricao }}</p>
+        <p>Autor: {{ livro.autor }}</p>
+        <p>Genero: {{ livro.genero }}</p>
+        <p>Data de publicação: {{ livro.dataPublicacao }}</p>
+    </div>
+    <img *ngIf="livro" [src]="livro.imagem_url" alt="{{ livro.titulo }}">
+</div>
+<div class="botao">
+    <button class="btn-pagar" (click)="openModal()">Fazer Emprestimo</button>
+</div>
+
+<app-confirmacao [showModal]="showModal" (close)="closeModal()">
+    <p>Tem certeza que quer fazer um emprestimo desse livro?</p>
+    <button class="btn-pagar" (click)="CriarEmprestimo()">Sim</button>
+    <button class="btn-nao" (click)="closeModal()">Não</button>
+</app-confirmacao>
